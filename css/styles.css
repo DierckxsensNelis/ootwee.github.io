@@ -384,6 +384,47 @@ section:has(.profile-img) {
     margin: 0 auto 1rem;
   }
 
+  p,
+  li,
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: anywhere;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    section {
+      width: 90%;
+      margin: 1.5rem 0;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+
+    .tarieven {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+
+    .room-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   header {
     height: auto;
     min-height: 72px;
@@ -472,7 +513,7 @@ section:has(.profile-img) {
     transform: none;
   }
 
-  nav.open > ul > li.has-submenu > a > svg {
+  nav.open > ul > li.has-submenu > svg {
     display: none;
   }
 }
