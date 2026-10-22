@@ -19,3 +19,15 @@ nav.querySelectorAll("a").forEach((link) => {
     toggle.setAttribute("aria-expanded", "false");
   });
 });
+
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const lenis = new Lenis({
+    anchors: true
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+}
